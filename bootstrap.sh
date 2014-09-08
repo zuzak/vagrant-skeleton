@@ -6,4 +6,7 @@ locale-gen
 cd ~vagrant
 sudo -u vagrant git clone https://github.com/zuzak/dotfiles .dotfiles > /dev/null 2>&1 || true
 cd .dotfiles
-sudo -u vagrant make quick basic
+sudo -u vagrant git pull
+sudo -u vagrant git submodule init
+sudo -u vagrant git submodule update
+sudo -u vagrant make basic
